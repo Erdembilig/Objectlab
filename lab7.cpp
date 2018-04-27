@@ -1,31 +1,38 @@
 #include<iostream>
 #include<string.h>
+#include<stdio.h>
 using namespace std;
 
 class student{
 private:
-    char name[20];
+    char sname[20];
     char studentid[12];
     float GPA;
     int Tuvshin;
-private:
+public:
     void medeeleloruulah();
-    void ner();
+    void studner(char name[]);
     void dugaaravah();
+private:
     void golch();
     void tuvshin();
     void Studentprint();
 };
 
+void student::studner(char name[]){
+    strcpy(sname, name);
+    cout<<sname;
+}
+
 class teacher{
 private:
-    char name[20];
+    char bname[20];
     char tenhimner[15];
     char bolovsroltuvshin[10];
     float tsalin;
 private:
     void medeeleloruulah();
-    void ner();
+    void bagshner();
     void tenhimneravah();
     void bolovsroltuvshinavah();
     void tsalinavah();
@@ -73,5 +80,8 @@ private:
 };
 
 int main(){
-
+    student o;
+    char i[20];
+    cin>>i;
+    o.studner(i);
 }
